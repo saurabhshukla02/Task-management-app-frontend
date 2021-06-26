@@ -1,0 +1,47 @@
+extends base.pug
+
+block style 
+    style
+        include ../static/registerAssociatesStyle.css
+
+block content
+    Section#registerContainer
+        div#formContainer
+            form(action="/register-associates" method="post" id="registerForm") 
+                h1 Register Associates 
+
+                div#name
+                    div#firstName
+                        h3 Firstname
+                        input(type="text" name="firstName" placeholder="First name" required)
+
+                    div#laststName
+                        h3 Lastname
+                        input(type="text" name="lastName" placeholder="Last name" required)
+
+                h3 Contact number
+                input(type="number" name="mobileNumber" placeholder="Mobile number" required)
+
+                h3 Privilege:  
+                select(name="privilege" id="privilege" required) 
+                    option(value="-") --select privilege--
+                    option(value="partner") Partner
+                    option(value="employee") Employee
+
+                h3 Email
+                input(type="email" name="username" placeholder="Email or username" required)
+
+                h3 Password
+                input(type="password" name="password" placeholder="Password" required)
+            
+                h3 Confirm password
+                input(type="password" name="password" placeholder="Confirm password" required)
+
+                p 
+                    button(type="submit" id="registerBtn") Register 
+                hr
+
+                p#registerLink Already have an account?
+                    a(href="/login")  Login 
+    
+    

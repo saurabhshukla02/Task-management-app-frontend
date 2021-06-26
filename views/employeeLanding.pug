@@ -1,0 +1,134 @@
+//- employees landing page 
+doctype html
+html
+    head
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        title= title 
+        style 
+            include ../static/employeeLandingStyle.css
+
+        block style 
+
+    body 
+        nav#navbar
+            div 
+                
+                h2 Employee dashboard  
+            ul 
+                li #[a(href = "/clients-list") Clients]
+                li #[a(href = "/login") Logout]
+
+
+        section#welcomeSection 
+            div#greeting
+                h1 Welcome! Mr. (employee)
+                p Hope you're doing well? Have a great day at work..
+
+            //- div#register-links-container
+            //-     ul 
+            //-         li #[a(href = "/client-register") Register a Client >>]
+            //-         li #[a(href = "/register-associates") Register associates >>]
+
+        hr
+
+        section#allTasks 
+            div#all-tasks-container
+                h1 Task Assigned 
+                div#filter-container
+                    div#status-container
+                        p Staus: 
+                            select(name="" id="") 
+                                option(value="") --select status-- 
+                                option(value="") Assigned 
+                                option(value="") Missing 
+                                option(value="") Done
+
+                    div#month-container
+                        p Month: 
+                            select(name="" id="") 
+                                option(value="") --select month-- 
+                                option(value="") January 
+                                option(value="") February 
+                                option(value="") March 
+                                option(value="") April 
+                                option(value="") May 
+                                option(value="") June 
+                                option(value="") July 
+                                option(value="") August 
+                                option(value="") September 
+                                option(value="") October 
+                                option(value="") November 
+                                option(value="") December  
+                    div#month-container
+                        p Year: 
+                            select(name="" id="") 
+                                option(value="") --select Year-- 
+                                option(value="") 2018 
+                                option(value="") 2019 
+                                option(value="") 2020
+                                option(value="") 2021
+                                option(value="") 2022
+                                option(value="") 2023
+                                option(value="") 2024
+                    div#filter-button
+                        button Filter
+                div#table-container
+                table 
+                    thead 
+                        tr 
+                            th Date 
+
+                            th Task  
+                            th Client  
+                            th Deadline   
+                            th Remark 
+                    tbody  
+                        tr 
+                            td 12-03-2021  
+ 
+                            td GST Bill Clearance   
+                            td Kapoor & Sons limited    
+                            td 16-03-2021   
+                            td -- 
+                    tbody  
+                        tr 
+                            td 10-03-2021  
+
+                            td Income tax return file    
+                            td Suraj company ltd     
+                            td 18-03-2021   
+                            td --
+                    tbody  
+                        tr 
+                            td 08-03-2021  
+
+                            td ITR file, GST Bill Clearance   
+                            td Maa Ambe Jwellers ltd    
+                            td 20-03-2021   
+                            td contact Shukla Ji for GST details 
+                    tbody  
+                        tr 
+                            td 08-03-2021  
+
+                            td ITR file, GST Bill Clearance   
+                            td Maa Ambe Jwellers ltd    
+                            td 20-03-2021   
+                            td contact Shukla Ji for GST details
+                    tbody  
+                        tr 
+                            td 08-03-2021  
+
+                            td ITR file, GST Bill Clearance   
+                            td Maa Ambe Jwellers ltd    
+                            td 20-03-2021   
+                            td -- 
+
+
+
+
+
+
+
+        //- footer
+        //-     a(href="#") Contacts
+        //-     a(href="/") &COPY; 2021 | Connect Keys

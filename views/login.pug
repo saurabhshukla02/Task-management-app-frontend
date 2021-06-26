@@ -1,0 +1,34 @@
+extends base.pug
+
+block style 
+    style
+        include ../static/loginStyle.css
+
+block content
+    Section#loginContainer
+        div#formContainer
+            form(action="" method="" id="loginForm") 
+                h1 Login
+                h3 Email
+                input(type="email" name="username" placeholder="phone number, username, or email")
+
+                h3 Password
+                input(type="password" name="password" placeholder="Password")
+            
+                p 
+                    button#loginBtn Login 
+                    span 
+                        a(href="#")  Forgot password?   
+                
+                Br 
+
+                p(style="padding: 1%") Temporary Links:-
+                ul(style="list-style-type:none") 
+                    li(style="padding: 2%")
+                        p Partner Login: #[a(href="/partner-dashboard") Partner-dashboard >>] 
+                    li 
+                        p Employee Login: #[a(href="/employee-dashboard") Employee-dashboard >>] 
+
+
+    
+    

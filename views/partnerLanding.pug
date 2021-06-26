@@ -1,0 +1,179 @@
+//- partner landing page 
+doctype html
+html
+    head
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        title= title 
+        style 
+            include ../static/partnerLandingStyle.css
+
+        block style 
+
+    body 
+        nav#navbar
+            div 
+                
+                h2 Partner dashboard  
+            ul 
+                li #[a(href = "/clients-list") Clients]
+                li #[a(href = "/associates") Associates]
+                //- li #[a(href = "#") Partners]
+                li #[a(href = "/login") Logout]
+
+
+        section#welcomeSection 
+            div#greeting
+                h1 Welcome! Mr. (Partner)
+                p Hope you're doing well? Have a great day at work..
+
+            div#register-links-container
+                ul 
+                    li #[a(href = "/client-register") Register a Client >>]
+                    li #[a(href = "/register-associates") Register associates >>]
+
+
+
+        section#assignTask 
+            div#assign-task-container
+                h1 Assign task to employees: 
+                div#assign-task-form-container
+                    form(action="" method="")
+                        h3 Employee: 
+                        select(name="" id="" required)
+                                option(value="") --select employee name--
+                                option(value="") html
+                                option(value="") css
+                                option(value="") javascript
+                                option(value="") C++
+                                option(value="") dsa
+                        h3 Task: 
+                        input(type="text" name="task" id="task" required placeholder="Enter the task")
+
+                        h3 Client: 
+                        select(name="" id="" required)
+                                option(value="") --select employee name--
+                                option(value="") html
+                                option(value="") css
+                                option(value="") javascript
+                                option(value="") C++
+                                option(value="") dsa
+
+                        h3 Set Deadline:
+                        input(type="date" name="deadline" id="deadline" required placeholder="Enter the deadline") 
+                        
+                        h3 Remark: 
+                        textarea(textarea name="remark" id="remark" cols="110" rows="5" placeholder="Enter remarks") 
+                        p 
+                            button Reset all
+                            button Assign
+                        
+
+
+
+        section#allTasks 
+            div#all-tasks-container
+                h1 Task details 
+                div#filter-container
+                    div#status-container
+                        p Staus: 
+                            select(name="" id="") 
+                                option(value="") --select status-- 
+                                option(value="") Assigned 
+                                option(value="") Missing 
+                                option(value="") Done
+
+                    div#month-container
+                        p Month: 
+                            select(name="" id="") 
+                                option(value="") --select month-- 
+                                option(value="") January 
+                                option(value="") February 
+                                option(value="") March 
+                                option(value="") April 
+                                option(value="") May 
+                                option(value="") June 
+                                option(value="") July 
+                                option(value="") August 
+                                option(value="") September 
+                                option(value="") October 
+                                option(value="") November 
+                                option(value="") December  
+
+                    div#year-container
+                        p Year: 
+                            select(name="" id="") 
+                                option(value="") --select Year-- 
+                                option(value="") 2018 
+                                option(value="") 2019 
+                                option(value="") 2020
+                                option(value="") 2021
+                                option(value="") 2022
+                                option(value="") 2023
+                                option(value="") 2024
+
+
+                    div#filter-button
+                        button Filter
+                div#table-container
+                table 
+                    thead 
+                        tr 
+                            th(style="min-width: 10%") Date 
+                            th(style="min-width: 20%") Employee assigned 
+                            th(style="min-width: 20%") Task  
+                            th(style="min-width: 20%") Client  
+                            th(style="min-width: 10%") Deadline   
+                            th(style="min-width: 25%") Remark 
+                    tbody  
+                        tr 
+                            td 12-03-2021  
+                            td Manohar Jat 
+                            td GST Bill Clearance   
+                            td Kapoor & Sons limited     
+                            td 16-03-2021   
+                            td -- 
+                    tbody  
+                        tr 
+                            td 10-03-2021  
+                            td Manpreet Singh 
+                            td Income tax return file    
+                            td Suraj company ltd     
+                            td 18-03-2021   
+                            td --
+                    tbody  
+                        tr 
+                            td 08-03-2021  
+                            td Manohar Jat 
+                            td ITR file, GST Bill Clearance
+                            td Maa Ambe Jwellers ltd    
+                            td 20-03-2021   
+                            td contact Shukla Ji for GST details 
+                    tbody  
+                        tr 
+                            td 08-03-2021  
+                            td Manohar Jat 
+                            td ITR file, GST Bill Clearance   
+                            td Maa Ambe Jwellers ltd   
+                            td 20-03-2021   
+                            td contact Shukla Ji for GST details 
+                    tbody  
+                        tr 
+                            td 08-03-2021  
+                            td Manohar Jat 
+                            td ITR file, GST Bill Clearance   
+                            td Maa Ambe Jwellers ltd    
+                            td 20-03-2021   
+                            td -- 
+
+
+
+
+
+        footer
+            a(href="#") Contacts
+            a(href="/") &COPY; 2021 | Connect Keys
+
+
+        block script
+        
+

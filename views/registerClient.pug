@@ -1,0 +1,55 @@
+extends base.pug
+
+block style 
+    style
+        include ../static/registerClientStyle.css
+
+block content
+    Section#registerContainer
+        div#formContainer
+            form(action="" method="" id="registerForm") 
+                h1 Register clients 
+
+
+                h3 Company Name:
+                input(type="text" name="companyName" id="companyName" placeholder="Enter your Company name" required)
+
+                h3 Owner's Name:
+                input(type="text" name="ownerName" id="ownerName" placeholder="Enter owner's name" required)
+
+                h3 Contact Number:
+                input(type="number" name="phoneNumber" id="mob. no." placeholder="phone or mobile number" required)
+
+                h3 Email:
+                input(type="email" name="e-mail" id="email" placeholder="abcd05@gmail.com" required)
+
+                h3 State:  
+                select(name="state" id="state" required) 
+                    option(value="-") --select state--
+                    option(value="delhi") Delhi
+                    option(value="maharastra") Maharastra
+                    option(value="rajasthan") Rajasthan
+                    option(value="westBengal") West Bengal
+                    option(value="gujarat") Gujarat
+
+                h3 City:  
+                select(name="city" id="city" required) 
+                    option(value="-") --select City--
+                    option(value="delhi") Delhi
+                    option(value="mumbai") Mumbai
+                    option(value="kota") Kota
+                    option(value="kolkata") Kolkata
+                    option(value="surat") Surat
+
+
+                h3 Address:
+                input(name="address" id="address" cols="110" rows="3" placeholder="Enter your address" required)
+            
+                h3 Area Pin:
+                input(type="number" name="arer_pin" id="area_pin" placeholder="six-digit area pincode" required)
+
+                p 
+                    button#registerBtn Register 
+
+    
+    

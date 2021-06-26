@@ -1,0 +1,32 @@
+//- Base Template
+doctype html
+html
+    head
+        link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+        title= title 
+        style 
+            include ../static/baseStyle.css
+
+        block style 
+
+    body 
+        nav#navbar
+            div 
+                
+                h1 Connect Keys 
+            ul 
+                li #[a(href = "/") Home]
+                li #[a(href = "/services") Services]
+                li #[a(href = "/login") Login]
+
+
+        block content
+
+        footer
+            a(href="#") FAQs
+            a(href="#") Contact Us
+            a(href="/") &COPY; 2020 | Connect Keys
+
+        block script
+        
+
